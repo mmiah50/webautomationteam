@@ -13,6 +13,7 @@ public class CommonApi {
     public static WebDriver driver = null;
     public static WebDriverWait wait = null;
 
+
     @Parameters({/*"useCloudEnv","cloudEnvName", */"os", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
     public void setUp(/*@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,*/
@@ -29,7 +30,7 @@ public class CommonApi {
     public WebDriver getLocalDriver(String browserName, String os) {
         if (browserName.equalsIgnoreCase("chrome")) {
             if (os.equalsIgnoreCase("windows")) {
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\arifq\\eclipse-workspace\\webautomationpractice\\Generic\\Drivers\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "/Users/salmaalam/IdeaProjects/webautomationteam/Generic/MacDriver/chromedriver");
                 driver = new ChromeDriver();
             } else if (os.equalsIgnoreCase("mac")) {
                 System.setProperty("webdriver.chrome.driver", "../Generic/drivers/mac/chromedriver");
@@ -37,7 +38,7 @@ public class CommonApi {
             }
         } else if (browserName.equalsIgnoreCase("firefox")) {
             if (os.equalsIgnoreCase("windows")) {
-                System.setProperty("webdriver.gecko.driver", "C:\\Users\\arifq\\eclipse-workspace\\webautomationpractice\\Generic\\Drivers\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "/Users/salmaalam/IdeaProjects/webautomationteam/Generic/MacDriver/geckodriver");
                 driver = new FirefoxDriver();
             } else if (os.equalsIgnoreCase("mac")) {
                 System.setProperty("webdriver.gecko.driver", "../Generic/drivers/mac/geckodriver");
