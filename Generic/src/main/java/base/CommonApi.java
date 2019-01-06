@@ -20,9 +20,9 @@ public class CommonApi {
             @Optional("windows") String os, @Optional("10") String os_version, @Optional("firefox") String browserName, @Optional("34")
             String browserVersion, @Optional("www.google.com") String url) throws IOException {
         getLocalDriver(browserName, os);
-        wait = new WebDriverWait(driver, 10);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 40);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(55, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
     }
@@ -47,31 +47,11 @@ public class CommonApi {
         }
         return driver;
     }
-
-
     @AfterMethod
     public void tearDown() {
         // driver.close();
         driver.quit();
     }
-
-
-    public void clearField(WebElement webElement) {
-        webElement.clear();
-    }
-
-    public void navigateBack() {
-        driver.navigate().back();
-    }
-
-    public void typeOnWebElement(WebElement webElement, String value) {
-        webElement.sendKeys(value);
-    }
-
-    public void typeOnWebElementAndEnter(WebElement webElement, String value) {
-        webElement.sendKeys(value, Keys.ENTER);
-    }
-
 }
 
 
