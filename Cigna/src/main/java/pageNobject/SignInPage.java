@@ -17,17 +17,10 @@ import java.util.concurrent.TimeUnit;
 
 public class SignInPage extends CommonApi {
 
-    @Test
-    public void setUp(){
-        wait = new WebDriverWait(driver, 10);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        driver.get("https://www.cigna.com/");
-        driver.manage().window().maximize();
 
 
     }
-}
+
 
 
 
