@@ -9,7 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>Geico</module>
         <module>Generic</module>
+
     </modules>
     <dependencyManagement>
         <dependencies>
