@@ -2,6 +2,7 @@ package pageobjecttest;
 
 import base.CommonApi;
 import basepage.LoginPage;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,8 +24,24 @@ public class LoginPageTest extends LoginPage {
         System.out.println("Page Title:" + title);
     }
 
+    @Test
+    public void testfacebookLogo(){
+        loginPage.checkfacebookLogo();
+    }
+    /*@Test
+    public void testhomeLogo() {
+        loginPage.checkhomeLogo();
+    /*@Test
+    public void testSearch() {
+        loginPage.searchFriend();
+    }*/
+    @Test
+    public void testfirstname() {
+        loginPage.checkfirstname();
+    }
 
-        }
+
+    }
 
 
 
