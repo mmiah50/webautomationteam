@@ -1,4 +1,9 @@
 *.idea
 *target
 *.credentials
+*.iml
+*.idea/
+*.DS_Store
+*Extent-Report
+*screenshots
 
