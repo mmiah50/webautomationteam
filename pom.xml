@@ -9,9 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>Geico</module>
         <module>Generic</module>
-
+        <module>Facebook</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -29,7 +28,7 @@
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
                 <version>6.14.3</version>
-            </dependency>https://github.com/WebAutomationProject-Team7/webautomationteam/pull/4/conflict?name=Generic%252Fsrc%252Fmain%252Fjava%252Fbase%252FCommonApi.java&ancestor_oid=decce5ffc8b581a654108022e7fda8839bb4577f&base_oid=00a48f589c67c899547069c6bf072d217231f39c&head_oid=152022a43eeae6b2147f0ab0236ec3408fed8854
+            </dependency>
             <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
