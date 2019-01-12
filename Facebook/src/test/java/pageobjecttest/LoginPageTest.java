@@ -23,11 +23,10 @@ public class LoginPageTest extends LoginPage {
     public void loginPageTitleTest() {
         String title = loginPage.validateLoginPageTitle();
         System.out.println("Page Title:" + title);
-
     }
 
     @Test
-    public void testfacebookLogo(){
+    public void testfacebookLogo() {
         loginPage.checkfacebookLogo();
     }
 
@@ -35,32 +34,64 @@ public class LoginPageTest extends LoginPage {
     public void SearchTest() {
         loginPage.searchFriend();
     }
+
     @Test
     public void testfirstname() {
         loginPage.checkfirstname();
     }
+
     @Test
-    public void Profile(){
+    public void Profile() {
         loginPage.checkfirstname();
     }
+
     @Test
-    public void HomeTest(){
+    public void HomeTest() {
         loginPage.CheckHome();
     }
+
     @Test
-    public void testFrienFriends(){
+    public void testFrienFriends() {
         loginPage.CheckFindFriends();
     }
+
     @Test
     public void testNewsFeed() {
         loginPage.CheckNewsFeed();
     }
     @Test
-    public void testAddAccount(){
-        loginPage.CheckAddAccount();
+    public void testAddAccount() {
+    loginPage.CheckAddAccount();
+    }
+    @Test
+    public void testMessenger() {
+     loginPage.CheckMesswnger();
+    }
 
+    @Test
+    public void testGroups() {
+    loginPage.CheckGroups();
     }
+    @Test
+    public void testGames() {
+     loginPage.CheckGames();
     }
+    @Test
+    public void testInstagram(){
+    loginPage.CheckInstagram();
+    }
+    @Test
+    public void testMarketPlace(){
+      loginPage.CheckMarketPlace();
+
+        }
+    @Test
+    public void testHelp() {
+        loginPage.CheckHelp();
+    }
+}
+
+
 
 
 

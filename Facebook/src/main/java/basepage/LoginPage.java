@@ -40,11 +40,6 @@ public class LoginPage extends CommonApi {
     public void checkfacebookLogo() {
         facebookLogo.click();
     }
-    /*@FindBy (xpath = "//span[@class='_2md']")
-    public static WebElement homeLogo;
-    public void checkhomeLogo() {
-        homeLogo.click();
-    }*/
 
     //Search Friends
     @FindBy(linkText = "Find Friends")
@@ -103,40 +98,79 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/a[1]")
     public static WebElement Profile;
+
     public void checkProfile() {
         Profile.click();
     }
-    @FindBy(xpath = "//html[@id='facebook']//div[@id='u_0_g']/a[@href='https://www.facebook.com/?ref=tn_tnmn']")
-      public static WebElement Home;
+
+    @FindBy(xpath = "_2s25")
+    public static WebElement Home;
+
     public void CheckHome() {
         Home.click();
     }
 
     @FindBy(linkText = "Find Friends")
     public static WebElement FindFriends;
+
     public void CheckFindFriends() {
         FindFriends.click();
     }
 
-    @FindBy(css ="body.hasLeftCol._2yq.home.composerExpanded._5vb_.fbx._-kb._61s0._605a.m_13pksao2xn.chrome.webkit.win.x1.Locale_en_US:nth-child(2) div._li:nth-child(1) div._21dp div._2t-8._1s4v._2s1x._h2p div._2t-a._26aw._5rmj._50ti._2s1y div._2t-a._50tj div._2t-a._4pmj._2t-d div._2t-f div._cy6:nth-child(1) div._4kny._2s24:nth-child(4) div._3qcu._cy7 > a._2s25")
+    @FindBy(xpath = "//div[contains(text(),'News Feed')]")
     public static WebElement NewsFeed;
+
     public void CheckNewsFeed() {
         NewsFeed.click();
-
     }
 
-    @FindBy(xpath= "//div[@class='_1gaz _1ga- _50f6']")
+    @FindBy(xpath = "//div[@class='_1gaz _1ga- _50f6']")
     public static WebElement AddAccount;
-    public void CheckAddAccount() {
-        AddAccount.click();
 
+    public void CheckAddAccount() {
+        //AddAccount.click();
     }
 
+    @FindBy(xpath = "//a[@title='Check out Messenger.']")
+    public static WebElement Messenger;
 
+    public void CheckMesswnger() {
+    }
+
+    @FindBy(xpath = "//a[@title='Browse our Groups directory.']")
+    public static WebElement Groups;
+
+    public void CheckGroups() {
+    }
+
+    @FindBy(xpath = "//a[@title='Check out Facebook games.']")
+    public static WebElement Games;
+
+    public void CheckGames() {
+    }
+
+    @FindBy(xpath = "//a[@title='Check out Instagram']")
+    public static WebElement Instagram;
+
+    public void CheckInstagram() {
+
+    }
+    @FindBy(xpath = "//a[@title='Browse our marketplace product directory.']")
+    public static WebElement MarketPlace;
+    public void CheckMarketPlace() {
+
+    }
+    @FindBy(xpath = "//a[@title='Visit our Help Center.']")
+    public static WebElement Help;
+    public void CheckHelp(){
+
+    }
+    @FindBy(xpath = "//a[contains(text(),'Account Security')]")
+    public static WebElement AccountSecurity;
+    public void CheckAccountSecurity(){
+
+    }
 }
-
-
-
 
 
 
