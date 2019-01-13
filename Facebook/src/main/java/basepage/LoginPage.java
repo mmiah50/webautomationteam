@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,66 +23,57 @@ import java.util.concurrent.TimeUnit;
 public class LoginPage extends CommonApi {
     @FindBy(xpath = "//*[@id=\"blueBarDOMInspector\"]/div/div/div/div[1]/h1/a/i")
     public static WebElement loginPageTitle;
-
     @FindBy(id = "email")
     WebElement username;
     @FindBy(id = "pass")
     WebElement password;
-
     public String validateLoginPageTitle() {
         username.sendKeys("miah_monir@yahooo.com");
         password.sendKeys("rahimam12");
+        loginBtn.click();
         return driver.getTitle();
     }
+        @FindBy(xpath = "//input[@id='u_0_2']")
+        public static WebElement loginBtn;
+        public void checkloginButton() {
+            loginBtn.click();
 
-    //logo
+        }
+
     @FindBy(xpath = "//i[@class='fb_logo img sp_DM94Tzbs4_7 sx_0d58d6']")
     public static WebElement facebookLogo;
-
     public void checkfacebookLogo() {
         facebookLogo.click();
     }
-
     //Search Friends
     @FindBy(linkText = "Find Friends")
     public static WebElement Search;
-
     public void searchFriend() {
-        Search.sendKeys("Barak Obama");
+        validateLoginPageTitle();
+        wait.until(ExpectedConditions.visibilityOf(Search));
+    Search.sendKeys("Barak Obama");
     }
-
     //Create new Account
     @FindBy(name = "websubmit")
     public static WebElement signUp;
-
     @FindBy(name = "firstname")
     public static WebElement firstname;
-
     @FindBy(name = "lastname")
     public static WebElement lastname;
-
     @FindBy(name = "reg_email__")
     public static WebElement signupemail;
-
     @FindBy(name = "reg_passwd__")
     public static WebElement newpassword;
-
     @FindBy(id = "month")
     public static WebElement month;
-
     @FindBy(id = "day")
     public static WebElement day;
-
     @FindBy(id = "year")
     public static WebElement year;
-
     @FindBy(id = "u_0_a")
     public static WebElement genderMale;
-
     @FindBy(name = "reg_email_confirmation__")
     public static WebElement resignupemail;
-
-
     public String checkfirstname() {
         firstname.sendKeys("Monir", Keys.ENTER);
         lastname.sendKeys("Miah", Keys.ENTER);
@@ -92,88 +85,87 @@ public class LoginPage extends CommonApi {
         year.sendKeys("1997");
         genderMale.click();
         signUp.click();
-
         return driver.getTitle();
     }
-
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/a[1]")
     public static WebElement Profile;
-
     public void checkProfile() {
         Profile.click();
     }
-
     @FindBy(xpath = "_2s25")
     public static WebElement Home;
-
     public void CheckHome() {
-        Home.click();
+     Home.click();
     }
-
     @FindBy(linkText = "Find Friends")
     public static WebElement FindFriends;
-
     public void CheckFindFriends() {
         FindFriends.click();
     }
-
     @FindBy(xpath = "//div[contains(text(),'News Feed')]")
     public static WebElement NewsFeed;
-
     public void CheckNewsFeed() {
         NewsFeed.click();
     }
-
     @FindBy(xpath = "//div[@class='_1gaz _1ga- _50f6']")
     public static WebElement AddAccount;
-
     public void CheckAddAccount() {
         //AddAccount.click();
     }
-
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
     public static WebElement Messenger;
-
     public void CheckMesswnger() {
     }
-
     @FindBy(xpath = "//a[@title='Browse our Groups directory.']")
     public static WebElement Groups;
-
     public void CheckGroups() {
     }
-
     @FindBy(xpath = "//a[@title='Check out Facebook games.']")
     public static WebElement Games;
-
     public void CheckGames() {
     }
-
     @FindBy(xpath = "//a[@title='Check out Instagram']")
     public static WebElement Instagram;
-
     public void CheckInstagram() {
-
     }
     @FindBy(xpath = "//a[@title='Browse our marketplace product directory.']")
     public static WebElement MarketPlace;
     public void CheckMarketPlace() {
-
     }
     @FindBy(xpath = "//a[@title='Visit our Help Center.']")
     public static WebElement Help;
-    public void CheckHelp(){
-
+    public void CheckHelp() {
     }
     @FindBy(xpath = "//a[contains(text(),'Account Security')]")
     public static WebElement AccountSecurity;
-    public void CheckAccountSecurity(){
-
+    public void CheckAccountSecurity() {
     }
+    @FindBy(xpath = "//a[@title='Review our terms and policies.']")
+    public static WebElement Terms;
+    public void CheckTerms() {
+    }
+    @FindBy(xpath = "//a[@title='Learn about Ad Choices.']")
+    public static WebElement AdChoices;
+    public void CheckAdChoices() {
+    }
+    @FindBy(xpath = "//a[contains(text(),'Login Help')]")
+    public static WebElement LoginHelp;
+    public void CheckLoginHelp() {
+    }
+    @FindBy(xpath = "//a[@title='Facebook Lite for Android.']")
+    public static WebElement FacebookLite;
+    public void CheckFaceBookLite() {
+    }
+    @FindBy(xpath = "//div[@class='_4-u5 _2pi6']")
+    public static WebElement Frame;
+    public void CheckFrame() {
+    }
+    @FindBy(xpath ="//a[@title='Donate to worthy causes.']\n" + "}")
+    public static WebElement Fundraisers;
+    public void CheckFundraisers() {
+    }
+
 }
-
-
-
 
 
 

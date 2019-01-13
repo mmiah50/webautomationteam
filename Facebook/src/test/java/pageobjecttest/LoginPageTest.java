@@ -1,8 +1,6 @@
 package pageobjecttest;
-
 import base.CommonApi;
 import basepage.LoginPage;
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
@@ -10,90 +8,108 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginPageTest extends LoginPage {
-
     LoginPage loginPage;
 
     @BeforeMethod
     public void init() {
-        loginPage = PageFactory.initElements(driver, LoginPage.class);
-
+        loginPage = PageFactory.initElements(driver,
+               LoginPage.class);
     }
-
     @Test
-    public void loginPageTitleTest() {
+    public void loginPageTitleTest() throws InterruptedException {
         String title = loginPage.validateLoginPageTitle();
         System.out.println("Page Title:" + title);
+        Thread.sleep(5000);
     }
-
     @Test
     public void testfacebookLogo() {
         loginPage.checkfacebookLogo();
     }
-
     @Test
     public void SearchTest() {
         loginPage.searchFriend();
     }
-
     @Test
     public void testfirstname() {
         loginPage.checkfirstname();
     }
-
     @Test
     public void Profile() {
         loginPage.checkfirstname();
     }
-
     @Test
     public void HomeTest() {
         loginPage.CheckHome();
     }
-
     @Test
     public void testFrienFriends() {
         loginPage.CheckFindFriends();
     }
-
     @Test
     public void testNewsFeed() {
         loginPage.CheckNewsFeed();
     }
     @Test
     public void testAddAccount() {
-    loginPage.CheckAddAccount();
+        loginPage.CheckAddAccount();
     }
     @Test
     public void testMessenger() {
-     loginPage.CheckMesswnger();
+        loginPage.CheckMesswnger();
     }
-
     @Test
     public void testGroups() {
-    loginPage.CheckGroups();
+        loginPage.CheckGroups();
     }
     @Test
     public void testGames() {
-     loginPage.CheckGames();
+        loginPage.CheckGames();
     }
     @Test
-    public void testInstagram(){
-    loginPage.CheckInstagram();
+    public void testInstagram() {
+        loginPage.CheckInstagram();
     }
     @Test
-    public void testMarketPlace(){
-      loginPage.CheckMarketPlace();
-
-        }
+    public void testMarketPlace() {
+        loginPage.CheckMarketPlace();
+    }
     @Test
     public void testHelp() {
         loginPage.CheckHelp();
+    }
+    @Test
+    public void testAccountSecurity() {
+        loginPage.CheckAccountSecurity();
+    }
+    @Test
+    public void testTerms() {
+        loginPage.CheckTerms();
+    }
+    @Test
+    public void testAdChoices() {
+        loginPage.CheckAdChoices();
+    }
+    @Test
+    public void testLoginHelp() {
+        loginPage.CheckLoginHelp();
+    }
+    @Test
+    public void testFacebookLite() {
+        loginPage.CheckFaceBookLite();
+    }
+    @Test
+    public void testFrame() {
+        loginPage.CheckFrame();
+    }
+    @Test
+    public void testFu() {
+        loginPage.CheckFrame();
     }
 }
 
 
 
-
+//a[@title='Donate to worthy causes.']
 
 
 
