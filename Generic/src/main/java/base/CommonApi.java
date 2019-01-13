@@ -33,7 +33,7 @@ public class CommonApi {
     @BeforeMethod
     public void setUp(/*@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,*/
                      @Optional("windows") String os, @Optional("10") String os_version, @Optional("chrome") String browserName, @Optional("34")
-                     String browserVersion, @Optional("https://www.google.com") String url) throws IOException {
+                     String browserVersion, @Optional("https://www.facebook.com") String url) throws IOException {
         getLocalDriver(browserName, os);
         wait = new WebDriverWait(driver, 40);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

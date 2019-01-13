@@ -13,62 +13,78 @@ public class LoginPageTest extends LoginPage {
     @BeforeMethod
     public void init() {
         loginPage = PageFactory.initElements(driver,
-               LoginPage.class);
+                LoginPage.class);
     }
+
     @Test
     public void loginPageTitleTest() throws InterruptedException {
         String title = loginPage.validateLoginPageTitle();
         System.out.println("Page Title:" + title);
         Thread.sleep(5000);
     }
+
     @Test
     public void testfacebookLogo() {
         loginPage.checkfacebookLogo();
     }
+
     @Test
     public void SearchTest() {
         loginPage.searchFriend();
     }
+
     @Test
     public void testfirstname() {
+
         loginPage.checkfirstname();
     }
+
     @Test
     public void Profile() {
         loginPage.checkfirstname();
     }
+
     @Test
     public void HomeTest() {
+
         loginPage.CheckHome();
     }
+
     @Test
     public void testFrienFriends() {
         loginPage.CheckFindFriends();
     }
+
     @Test
     public void testNewsFeed() {
         loginPage.CheckNewsFeed();
     }
+
     @Test
     public void testAddAccount() {
         loginPage.CheckAddAccount();
     }
+
     @Test
     public void testMessenger() {
         loginPage.CheckMesswnger();
     }
+
     @Test
     public void testGroups() {
         loginPage.CheckGroups();
     }
+
     @Test
     public void testGames() {
         loginPage.CheckGames();
     }
+
     @Test
     public void testInstagram() {
         loginPage.CheckInstagram();
     }
+
     @Test
     public void testMarketPlace() {
         loginPage.CheckMarketPlace();
@@ -81,35 +97,50 @@ public class LoginPageTest extends LoginPage {
     public void testAccountSecurity() {
         loginPage.CheckAccountSecurity();
     }
+
     @Test
     public void testTerms() {
         loginPage.CheckTerms();
     }
+
     @Test
     public void testAdChoices() {
         loginPage.CheckAdChoices();
     }
+
     @Test
     public void testLoginHelp() {
         loginPage.CheckLoginHelp();
     }
+
     @Test
     public void testFacebookLite() {
         loginPage.CheckFaceBookLite();
     }
+
     @Test
     public void testFrame() {
         loginPage.CheckFrame();
     }
+
     @Test
-    public void testFu() {
-        loginPage.CheckFrame();
+    public void testFundraisers() {
+        loginPage.CheckFundraisers();
+    }
+
+    @Test
+    public void testPrivacy() {
+        loginPage.CheckPrivacy();
+    }
+    @Test
+    public void testCreatePage() {
+        loginPage.CheckCraetePage();
     }
 }
 
 
 
-//a[@title='Donate to worthy causes.']
+
 
 
 

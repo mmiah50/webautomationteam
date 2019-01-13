@@ -139,6 +139,7 @@ public class LoginPage extends CommonApi {
     @FindBy(xpath = "//a[contains(text(),'Account Security')]")
     public static WebElement AccountSecurity;
     public void CheckAccountSecurity() {
+        AccountSecurity.click();
     }
     @FindBy(xpath = "//a[@title='Review our terms and policies.']")
     public static WebElement Terms;
@@ -164,8 +165,19 @@ public class LoginPage extends CommonApi {
     public static WebElement Fundraisers;
     public void CheckFundraisers() {
     }
+    @FindBy(xpath ="//a[@title='Learn about your privacy and Facebook.']")
+    public static WebElement privacy;
+    public void CheckPrivacy() {
+        privacy.click();
+    }
+    @FindBy(xpath ="//a[@title='Create a Page']")
+    public static WebElement createPage;
+    public void CheckCraetePage() {
+        createPage.click();
+    }
 
-}
+    }
+
 
 
 
