@@ -20,7 +20,7 @@ public class LoginPageTest extends LoginPage {
     public void loginPageTitleTest() throws InterruptedException {
         String title = loginPage.validateLoginPageTitle();
         System.out.println("Page Title:" + title);
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 
     @Test
@@ -34,8 +34,7 @@ public class LoginPageTest extends LoginPage {
     }
 
     @Test
-    public void testfirstname() {
-
+    public void testfirstname()  {
         loginPage.checkfirstname();
     }
 
@@ -49,20 +48,21 @@ public class LoginPageTest extends LoginPage {
 
         loginPage.CheckHome();
     }
-
     @Test
-    public void testFrienFriends() {
+    public void testFrienFriends()
+    {
         loginPage.CheckFindFriends();
     }
 
     @Test
-    public void testNewsFeed() {
-        loginPage.CheckNewsFeed();
+    public void testNewsFeed()
+    {
+     loginPage.CheckNewsFeed();
     }
 
     @Test
     public void testAddAccount() {
-        loginPage.CheckAddAccount();
+     loginPage.CheckAddAccount();
     }
 
     @Test
@@ -77,6 +77,7 @@ public class LoginPageTest extends LoginPage {
 
     @Test
     public void testGames() {
+
         loginPage.CheckGames();
     }
 
@@ -89,13 +90,15 @@ public class LoginPageTest extends LoginPage {
     public void testMarketPlace() {
         loginPage.CheckMarketPlace();
     }
+
     @Test
     public void testHelp() {
         loginPage.CheckHelp();
     }
+
     @Test
     public void testAccountSecurity() {
-        loginPage.CheckAccountSecurity();
+      loginPage.CheckAccountSecurity();
     }
 
     @Test
@@ -105,11 +108,13 @@ public class LoginPageTest extends LoginPage {
 
     @Test
     public void testAdChoices() {
+
         loginPage.CheckAdChoices();
     }
 
     @Test
     public void testLoginHelp() {
+
         loginPage.CheckLoginHelp();
     }
 
@@ -120,6 +125,7 @@ public class LoginPageTest extends LoginPage {
 
     @Test
     public void testFrame() {
+
         loginPage.CheckFrame();
     }
 
@@ -132,9 +138,25 @@ public class LoginPageTest extends LoginPage {
     public void testPrivacy() {
         loginPage.CheckPrivacy();
     }
+
     @Test
     public void testCreatePage() {
+
         loginPage.CheckCraetePage();
+    }
+    @Test
+    public void testPageCategories() {
+
+        loginPage.CheckPageCategories();
+    }
+    @Test
+    public void testgetmessenger() {
+
+        loginPage.Checkgetmessenger();
+    }
+    @Test
+    public void testmyNameTag() {
+        loginPage.CheckMyNameTag();
     }
 }
 
