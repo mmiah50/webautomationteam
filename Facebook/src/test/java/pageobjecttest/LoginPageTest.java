@@ -163,6 +163,16 @@ public class LoginPageTest extends LoginPage {
     public void testAboutFacebook() {
         loginPage.CheckaboutFacebook();
     }
+    @Test
+    public void testdataPolicy() {
+        loginPage.CheckdataPolicy();
+     }
+    @Test
+    public void testcookiesPolicy() {
+        loginPage.CheckcookiesPolicy();
+
+    }
+
 }
 
 

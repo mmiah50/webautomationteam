@@ -37,7 +37,6 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//input[@id='u_0_2']")
     public static WebElement loginBtn;
-
     public void checkloginButton() {
         loginBtn.click();
 
@@ -45,7 +44,6 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//i[@class='fb_logo img sp_z3EmYTfbUVU sx_6a42ec']")
     public static WebElement facebookLogo;
-
     public void checkfacebookLogo() {
         facebookLogo.click();
     }
@@ -53,13 +51,11 @@ public class LoginPage extends CommonApi {
     //Search Friends
     @FindBy(linkText = "Find Friends")
     public static WebElement Search;
-
     public void searchFriend() {
         validateLoginPageTitle();
         wait.until(ExpectedConditions.visibilityOf(Search));
         Search.sendKeys("Barak Obama");
     }
-
     //Create new Account
     @FindBy(name = "websubmit")
     public static WebElement signUp;
@@ -98,21 +94,18 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/a[1]")
     public static WebElement Profile;
-
     public void checkProfile() {
         Profile.click();
     }
 
     @FindBy(xpath = "//a[contains(text(),'Home')]")
     public static WebElement Home;
-
     public void CheckHome() {
 
     }
 
     @FindBy(linkText = "Find Friends")
     public static WebElement FindFriends;
-
     public void CheckFindFriends() {
         FindFriends.click();
     }
@@ -127,12 +120,10 @@ public class LoginPage extends CommonApi {
     public void CheckAddAccount() {
 
     }
-
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
     public static WebElement Messenger;
     public void CheckMesswnger() {
     }
-
     @FindBy(xpath = "//a[@title='Browse our Groups directory.']")
     public static WebElement Groups;
     public void CheckGroups() {
@@ -228,7 +219,7 @@ public class LoginPage extends CommonApi {
     public static WebElement forgetPassword;
 
     public void CheckForgetPassword() {
-        forgetPassword.click();
+    forgetPassword.click();
 
     }
     @FindBy(xpath = "//div[@class='_1gaz _c24 _50f6']")
@@ -246,7 +237,18 @@ public class LoginPage extends CommonApi {
     public void CheckaboutFacebook() {
         aboutFacebook.click();
     }
+    @FindBy(xpath = "//a[@id='privacy-link']")
+    public static WebElement dataPolicy;
+    public void CheckdataPolicy() {
+        dataPolicy.click();
+    }
+    @FindBy(xpath = "//a[@id='cookie-use-link']")
+    public static WebElement cookiesPolicy;
+    public void CheckcookiesPolicy() {
+        cookiesPolicy.click();
 
+
+    }
 }
 
 
