@@ -119,27 +119,22 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//div[contains(text(),'News Feed')]")
     public static WebElement NewsFeed;
-
     public void CheckNewsFeed() {
-        NewsFeed.click();
     }
 
     @FindBy(xpath = "//div[@class='_1gaz _1ga- _50f6']")
     public static WebElement AddAccount;
-
     public void CheckAddAccount() {
 
     }
 
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
     public static WebElement Messenger;
-
     public void CheckMesswnger() {
     }
 
     @FindBy(xpath = "//a[@title='Browse our Groups directory.']")
     public static WebElement Groups;
-
     public void CheckGroups() {
     }
 
@@ -155,44 +150,37 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//a[@title='Browse our marketplace product directory.']")
     public static WebElement MarketPlace;
-
     public void CheckMarketPlace() {
     }
 
     @FindBy(xpath = "//a[@title='Visit our Help Center.']")
     public static WebElement Help;
-
     public void CheckHelp() {
     }
 
     @FindBy(xpath = "//a[contains(text(),'Account Security')]")
     public static WebElement AccountSecurity;
-
     public void CheckAccountSecurity() {
         AccountSecurity.click();
     }
 
     @FindBy(xpath = "//a[@title='Review our terms and policies.']")
     public static WebElement Terms;
-
     public void CheckTerms() {
     }
 
     @FindBy(xpath = "//a[@title='Learn about Ad Choices.']")
     public static WebElement AdChoices;
-
     public void CheckAdChoices() {
     }
 
     @FindBy(xpath = "//a[contains(text(),'Login Help')]")
     public static WebElement LoginHelp;
-
     public void CheckLoginHelp() {
     }
 
     @FindBy(xpath = "//a[@title='Facebook Lite for Android.']")
     public static WebElement FacebookLite;
-
     public void CheckFaceBookLite() {
     }
 
@@ -253,7 +241,11 @@ public class LoginPage extends CommonApi {
     public void CheckphotoNvideo() {
 
     }
-
+    @FindBy(xpath = "//a[@title='Read our blog, discover the resource center, and find job opportunities.']")
+    public static WebElement aboutFacebook;
+    public void CheckaboutFacebook() {
+        aboutFacebook.click();
+    }
 
 }
 

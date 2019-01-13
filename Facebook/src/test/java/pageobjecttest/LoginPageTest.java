@@ -148,6 +148,7 @@ public class LoginPageTest extends LoginPage {
     public void testgetmessenger() {
         loginPage.Checkgetmessenger();
     }
+
     @Test
     public void testmyNameTag() {
         loginPage.CheckMyNameTag();
@@ -158,6 +159,10 @@ public class LoginPageTest extends LoginPage {
         loginPage.CheckphotoNvideo();
     }
 
+    @Test
+    public void testAboutFacebook() {
+        loginPage.CheckaboutFacebook();
+    }
 }
 
 
