@@ -37,6 +37,7 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//input[@id='u_0_2']")
     public static WebElement loginBtn;
+
     public void checkloginButton() {
         loginBtn.click();
 
@@ -44,6 +45,7 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//i[@class='fb_logo img sp_z3EmYTfbUVU sx_6a42ec']")
     public static WebElement facebookLogo;
+
     public void checkfacebookLogo() {
         facebookLogo.click();
     }
@@ -51,11 +53,13 @@ public class LoginPage extends CommonApi {
     //Search Friends
     @FindBy(linkText = "Find Friends")
     public static WebElement Search;
+
     public void searchFriend() {
         validateLoginPageTitle();
         wait.until(ExpectedConditions.visibilityOf(Search));
         Search.sendKeys("Barak Obama");
     }
+
     //Create new Account
     @FindBy(name = "websubmit")
     public static WebElement signUp;
@@ -94,84 +98,102 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/a[1]")
     public static WebElement Profile;
+
     public void checkProfile() {
         Profile.click();
     }
 
     @FindBy(xpath = "//a[contains(text(),'Home')]")
     public static WebElement Home;
+
     public void CheckHome() {
 
     }
 
     @FindBy(linkText = "Find Friends")
     public static WebElement FindFriends;
+
     public void CheckFindFriends() {
         FindFriends.click();
     }
 
     @FindBy(xpath = "//div[contains(text(),'News Feed')]")
     public static WebElement NewsFeed;
+
     public void CheckNewsFeed() {
     }
 
     @FindBy(xpath = "//div[@class='_1gaz _1ga- _50f6']")
     public static WebElement AddAccount;
+
     public void CheckAddAccount() {
 
     }
+
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
     public static WebElement Messenger;
+
     public void CheckMesswnger() {
     }
+
     @FindBy(xpath = "//a[@title='Browse our Groups directory.']")
     public static WebElement Groups;
+
     public void CheckGroups() {
     }
 
     @FindBy(xpath = "//a[@title='Check out Facebook games.']")
     public static WebElement Games;
+
     public void CheckGames() {
     }
 
     @FindBy(xpath = "//a[@title='Check out Instagram']")
     public static WebElement Instagram;
+
     public void CheckInstagram() {
     }
 
     @FindBy(xpath = "//a[@title='Browse our marketplace product directory.']")
     public static WebElement MarketPlace;
+
     public void CheckMarketPlace() {
     }
 
     @FindBy(xpath = "//a[@title='Visit our Help Center.']")
     public static WebElement Help;
+
     public void CheckHelp() {
     }
 
     @FindBy(xpath = "//a[contains(text(),'Account Security')]")
     public static WebElement AccountSecurity;
+
     public void CheckAccountSecurity() {
         AccountSecurity.click();
     }
 
     @FindBy(xpath = "//a[@title='Review our terms and policies.']")
     public static WebElement Terms;
+
     public void CheckTerms() {
     }
 
     @FindBy(xpath = "//a[@title='Learn about Ad Choices.']")
     public static WebElement AdChoices;
+
     public void CheckAdChoices() {
     }
 
     @FindBy(xpath = "//a[contains(text(),'Login Help')]")
     public static WebElement LoginHelp;
+
     public void CheckLoginHelp() {
     }
 
     @FindBy(xpath = "//a[@title='Facebook Lite for Android.']")
     public static WebElement FacebookLite;
+
     public void CheckFaceBookLite() {
     }
 
@@ -217,9 +239,8 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//a[contains(text(),'Forgot account?')]")
     public static WebElement forgetPassword;
-
     public void CheckForgetPassword() {
-    forgetPassword.click();
+        forgetPassword.click();
 
     }
     @FindBy(xpath = "//div[@class='_1gaz _c24 _50f6']")
@@ -230,26 +251,26 @@ public class LoginPage extends CommonApi {
     @FindBy(xpath = "//input[@id='js_d']")
     public static WebElement photoNvideo;
     public void CheckphotoNvideo() {
-
     }
+
     @FindBy(xpath = "//a[@title='Read our blog, discover the resource center, and find job opportunities.']")
     public static WebElement aboutFacebook;
     public void CheckaboutFacebook() {
         aboutFacebook.click();
     }
-    @FindBy(xpath = "//a[@id='privacy-link']")
-    public static WebElement dataPolicy;
-    public void CheckdataPolicy() {
-        dataPolicy.click();
-    }
-    @FindBy(xpath = "//a[@id='cookie-use-link']")
-    public static WebElement cookiesPolicy;
-    public void CheckcookiesPolicy() {
-        cookiesPolicy.click();
+      @FindBy(xpath = "//a[@id='privacy-link']")
+      public static WebElement dataPolicy;
+      public void CheckdataPolicy () {
+          dataPolicy.click();
+     }
+      @FindBy(xpath = "//a[@id='cookie-use-link']")
+       public static WebElement cookiesPolicy;
+       public void CheckcookiesPolicy () {
+       cookiesPolicy.click();
 
 
     }
-}
+ }
 
 
 
