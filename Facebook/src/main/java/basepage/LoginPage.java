@@ -98,7 +98,6 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/a[1]")
     public static WebElement Profile;
-
     public void checkProfile() {
         Profile.click();
     }
@@ -111,9 +110,8 @@ public class LoginPage extends CommonApi {
     }
 
     @FindBy(linkText = "Find Friends")
-    public static WebElement FindFriends;
-
-    public void CheckFindFriends() {
+     public static WebElement FindFriends;
+     public void CheckFindFriends() {
         FindFriends.click();
     }
 
@@ -124,16 +122,14 @@ public class LoginPage extends CommonApi {
     }
 
     @FindBy(xpath = "//div[@class='_1gaz _1ga- _50f6']")
-    public static WebElement AddAccount;
-
-    public void CheckAddAccount() {
+     public static WebElement AddAccount;
+     public void CheckAddAccount() {
 
     }
 
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
-    public static WebElement Messenger;
-
-    public void CheckMesswnger() {
+     public static WebElement Messenger;
+     public void CheckMesswnger() {
     }
 
     @FindBy(xpath = "//a[@title='Browse our Groups directory.']")
@@ -150,19 +146,16 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//a[@title='Check out Instagram']")
     public static WebElement Instagram;
-
     public void CheckInstagram() {
     }
 
     @FindBy(xpath = "//a[@title='Browse our marketplace product directory.']")
     public static WebElement MarketPlace;
-
     public void CheckMarketPlace() {
     }
 
     @FindBy(xpath = "//a[@title='Visit our Help Center.']")
     public static WebElement Help;
-
     public void CheckHelp() {
     }
 
@@ -175,32 +168,27 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//a[@title='Review our terms and policies.']")
     public static WebElement Terms;
-
     public void CheckTerms() {
     }
 
     @FindBy(xpath = "//a[@title='Learn about Ad Choices.']")
     public static WebElement AdChoices;
-
     public void CheckAdChoices() {
     }
 
     @FindBy(xpath = "//a[contains(text(),'Login Help')]")
-    public static WebElement LoginHelp;
-
-    public void CheckLoginHelp() {
+     public static WebElement LoginHelp;
+     public void CheckLoginHelp() {
     }
 
     @FindBy(xpath = "//a[@title='Facebook Lite for Android.']")
-    public static WebElement FacebookLite;
-
-    public void CheckFaceBookLite() {
+     public static WebElement FacebookLite;
+     public void CheckFaceBookLite() {
     }
 
     @FindBy(xpath = "//div[@class='_4-u5 _2pi6']")
-    public static WebElement Frame;
-
-    public void CheckFrame() {
+     public static WebElement Frame;
+     public void CheckFrame() {
     }
 
     @FindBy(xpath = "//a[@title='Donate to worthy causes.']\n" + "}")
@@ -210,29 +198,25 @@ public class LoginPage extends CommonApi {
     }
 
     @FindBy(xpath = "//a[@title='Learn about your privacy and Facebook.']")
-    public static WebElement privacy;
-
-    public void CheckPrivacy() {
+     public static WebElement privacy;
+     public void CheckPrivacy() {
         privacy.click();
     }
 
     @FindBy(xpath = "//a[@title='Create a Page']")
     public static WebElement createPage;
-
     public void CheckCraetePage() {
         createPage.click();
     }
 
     @FindBy(xpath = "//a[contains(text(),'Page Categories')]")
     public static WebElement pageCategories;
-
     public void CheckPageCategories() {
         pageCategories.click();
     }
 
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
     public static WebElement getMessenger;
-
     public void Checkgetmessenger() {
         getMessenger.click();
     }
