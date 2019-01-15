@@ -19,7 +19,7 @@ public class ConnectToSqlDB {
 
     public static Properties loadProperties() throws IOException {
         Properties properties = new Properties();
-        File filepath = new File("C:\\Users\\Moniruzzaman Miah\\Desktop\\java1\\webautomationteam");
+        File filepath = new File("C:\\Users\\Moniruzzaman Miah\\Desktop\\java1\\webautomationteam\\Facebook\\src\\test\\resource\\secret.properties");
         InputStream ism = new FileInputStream(filepath.getAbsoluteFile());
         properties.load(ism);
         ism.close();
