@@ -17,8 +17,8 @@ public class LoginPageTest extends LoginPage {
                 LoginPage.class);
     }
 
-    @Test
-    public void loginPageTitleTest() throws Exception {
+     @Test
+     public void loginPageTitleTest() throws Exception {
 
         ConnectToSqlDB connect = new ConnectToSqlDB();
         connect.connectToSqlDatabase();
@@ -30,13 +30,14 @@ public class LoginPageTest extends LoginPage {
     }
 
 
-     @Test
-     public void testfacebookLogo() {
+      @Test
+      public void testfacebookLogo() {
+
         loginPage.checkfacebookLogo();
     }
 
-    @Test
-    public void SearchTest() {
+     @Test
+     public void SearchTest() {
         loginPage.searchFriend();
     }
 
@@ -47,50 +48,54 @@ public class LoginPageTest extends LoginPage {
 
     @Test
     public void Profile() {
+
         loginPage.checkfirstname();
     }
 
-    @Test
-    public void HomeTest() {
+     @Test
+     public void HomeTest() {
         loginPage.CheckHome();
     }
 
-     @Test
-     public void testFrienFriends() {
+      @Test
+      public void testFrienFriends() {
+
         loginPage.CheckFindFriends();
     }
 
-     @Test
-     public void testNewsFeed() {
+      @Test
+      public void testNewsFeed() {
+
         loginPage.CheckNewsFeed();
     }
 
-    @Test
-     public void testAddAccount() {
+       @Test
+      public void testAddAccount() {
         loginPage.CheckAddAccount();
     }
 
      @Test
-    public void testMessenger() {
+     public void testMessenger() {
         loginPage.CheckMesswnger();
     }
 
-    @Test
+     @Test
      public void testGroups() {
+
         loginPage.CheckGroups();
     }
 
-     @Test
+      @Test
       public void testGames() {
         loginPage.CheckGames();
     }
 
-     @Test
+      @Test
      public void testInstagram() {
         loginPage.CheckInstagram();
      }
 
-    @Test
+     @Test
      public void testMarketPlace() {
         loginPage.CheckMarketPlace();
      }
@@ -101,7 +106,7 @@ public class LoginPageTest extends LoginPage {
         loginPage.CheckHelp();
      }
 
-    @Test
+     @Test
      public void testAccountSecurity() {
        loginPage.CheckAccountSecurity();
      }
@@ -117,9 +122,9 @@ public class LoginPageTest extends LoginPage {
        loginPage.CheckAdChoices();
     }
 
-     @Test
+      @Test
       public void testLoginHelp() {
-        loginPage.CheckLoginHelp();
+       loginPage.CheckLoginHelp();
     }
      @Test
       public void testFacebookLite() {
@@ -128,7 +133,7 @@ public class LoginPageTest extends LoginPage {
 
      @Test
       public void testFrame() {
-       loginPage.CheckFrame();
+        loginPage.CheckFrame();
     }
      @Test
      public void testFundraisers() {
@@ -140,49 +145,51 @@ public class LoginPageTest extends LoginPage {
        loginPage.CheckPrivacy();
     }
 
-     @Test
-     public void testCreatePage() {
-       loginPage.CheckCraetePage();
+      @Test
+      public void testCreatePage() {
+
+        loginPage.CheckCraetePage();
     }
 
-    @Test
+     @Test
      public void testPageCategories() {
        loginPage.CheckPageCategories();
     }
 
-    @Test
-     public void testGetMessenger() {
-       loginPage.Checkgetmessenger();
+
+       @Test
+       public void testGetMessenger() {
+
+        loginPage.Checkgetmessenger();
     }
 
-    @Test
-     public void testmyNameTag() {
+      @Test
+      public void testmyNameTag() {
       loginPage.CheckMyNameTag();
     }
 
-    @Test
-    public void testPhotoNvideo() {
-      loginPage.CheckphotoNvideo();
+      @Test
+      public void testPhotoNvideo() {
+
+        loginPage.CheckphotoNvideo();
     }
 
-    @Test
-     public void testAboutFacebook() {
+     @Test
+      public void testAboutFacebook() {
       loginPage.CheckaboutFacebook();
     }
-    @Test
-    public void testDataPolicy() {
-      loginPage.CheckdataPolicy();
+     @Test
+     public void testDataPolicy() {
+
+        loginPage.CheckdataPolicy();
      }
-    @Test
-     public void testCookiesPolicy() {
+      @Test
+      public void testCookiesPolicy() {
       loginPage.CheckcookiesPolicy();
 
     }
-
-
-
-    @AfterMethod
-    public void tearDom() {
+      @AfterMethod
+      public void tearDom() {
     driver.quit();
 }
 }
