@@ -26,7 +26,6 @@ public class ConnectToSqlDB {
         return properties;
     }
 
-
     public static Connection connectToSqlDatabase() throws IOException, SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         properties = loadProperties();
         String url = properties.getProperty("MYSQLJDBC.url");
