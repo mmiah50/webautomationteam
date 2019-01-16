@@ -28,14 +28,11 @@ public class LoginPageTest extends LoginPage {
         System.out.println("Page Title:" + title);
         Thread.sleep(1000);
     }
-
-
       @Test
       public void testfacebookLogo() {
 
         loginPage.checkfacebookLogo();
     }
-
      @Test
      public void SearchTest() {
         loginPage.searchFriend();
@@ -92,6 +89,7 @@ public class LoginPageTest extends LoginPage {
 
       @Test
      public void testInstagram() {
+
         loginPage.CheckInstagram();
      }
 
@@ -156,7 +154,6 @@ public class LoginPageTest extends LoginPage {
        loginPage.CheckPageCategories();
     }
 
-
        @Test
        public void testGetMessenger() {
 
@@ -190,7 +187,7 @@ public class LoginPageTest extends LoginPage {
     }
       @AfterMethod
       public void tearDom() {
-    driver.quit();
+      driver.quit();
 }
 }
 

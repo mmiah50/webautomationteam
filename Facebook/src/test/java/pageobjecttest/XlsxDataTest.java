@@ -1,14 +1,21 @@
 package pageobjecttest;
 
 import basepage.LoginPage;
+import dataReader.XlsxData;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
 
 public class XlsxDataTest {
     public class LoginPageTest extends XlsxDataTest {
         LoginPage loginPage;
     }
-    @FindBy(linkText = "Find Friends")
-    public static WebElement Search;
 
+
+    @Test
+    public void SearchTest() {
+        XlsxData.ChecksearchFriend();
+    }
 }
+

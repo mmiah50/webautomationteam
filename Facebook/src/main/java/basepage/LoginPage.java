@@ -113,7 +113,6 @@ public class LoginPage extends CommonApi {
 
     @FindBy(linkText = "Find Friends")
     public static WebElement FindFriends;
-
     public void CheckFindFriends() {
         FindFriends.click();
     }
