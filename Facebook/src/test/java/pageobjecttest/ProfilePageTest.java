@@ -1,7 +1,7 @@
 //package pageobjecttest;
 //
 //import base.CommonApi;
-//import basepage.Signup;
+//
 //import org.testng.Assert;
 //import org.testng.annotations.BeforeMethod;
 //import org.testng.annotations.Test;
@@ -23,7 +23,7 @@
 //        public void getTitleTest() throws InterruptedException {
 //            Thread.sleep(1000);
 //            String actual= profilePage.validateLoginPageTitle();
-//            Assert.assertEquals(actual,"Sele Nium");
+//            Assert.assertEquals(actual,"Seleium");
 //        }
 //    }
 //

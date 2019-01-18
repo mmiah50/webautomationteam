@@ -2,9 +2,6 @@ package dataReader;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
 import java.io.File;
 import java.io.FileInputStream;
 
@@ -19,8 +16,6 @@ public class XlsxData {
             wb = new XSSFWorkbook(fis);
             sheet1 = wb.getSheetAt(0);
             wb.close();
-
-
 
         }catch (Exception e){
             System.out.println(e.getMessage());

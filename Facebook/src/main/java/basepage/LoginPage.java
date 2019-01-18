@@ -247,19 +247,16 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//div[@class='_1gaz _c24 _50f6']")
     public static WebElement myNameTag;
-
     public void CheckMyNameTag() {
     }
 
     @FindBy(xpath = "//input[@id='js_d']")
     public static WebElement photoNvideo;
-
     public void CheckphotoNvideo() {
     }
 
     @FindBy(xpath = "//a[@title='Read our blog, discover the resource center, and find job opportunities.']")
     public static WebElement aboutFacebook;
-
     public void CheckaboutFacebook() {
         aboutFacebook.click();
     }
@@ -280,20 +277,7 @@ public class LoginPage extends CommonApi {
 
     }
 
-    //Search Using data from xlsx file
-//    XlsxData xlreader = new XlsxData("C:\\Users\\Moniruzzaman Miah\\Desktop\\java1\\webautomationteam\\Facebook\\src\\main\\java\\testData\\FBtestData.xlsx");
-//
-//    public void xltoSearchBar() throws InterruptedException {
-//
-//        int rowcount = xlreader.getRowCount("Friend");
-//        for (int rowNum = 2; rowNum <= rowcount; rowNum++) {
-//            String searchItems = xlreader.getData("", "SearchFriend", rowNum);
-//            searchFriend().sendKeys(searchItems, Keys.ENTER);
-//            searchFriend().clear();
-//            Thread.sleep(1000);
-//        }
-//
-//    }
+
 }
 
 

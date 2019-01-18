@@ -2,9 +2,6 @@ package pageobjecttest;
 
 import basepage.LoginPage;
 import dataReader.XlsxData;
-
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 public class XlsxDataTest {
@@ -14,7 +11,8 @@ public class XlsxDataTest {
 
 
     @Test
-    public void SearchTest() {
+    public void SearchTest()
+    {
         XlsxData.ChecksearchFriend();
     }
 }
