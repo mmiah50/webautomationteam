@@ -34,12 +34,14 @@ public class LoginPageTest extends LoginPage {
         loginPage.checkfacebookLogo();
     }
      @Test
-     public void SearchTest() {
+       public void SearchTest() {
+
         loginPage.searchFriend();
     }
 
      @Test
      public void testfirstname() {
+
         loginPage.checkfirstname();
     }
 
@@ -84,6 +86,7 @@ public class LoginPageTest extends LoginPage {
 
       @Test
       public void testGames() {
+
         loginPage.CheckGames();
     }
 
@@ -117,7 +120,8 @@ public class LoginPageTest extends LoginPage {
 
      @Test
       public void testAdChoices() {
-       loginPage.CheckAdChoices();
+
+        loginPage.CheckAdChoices();
     }
 
       @Test
@@ -140,12 +144,12 @@ public class LoginPageTest extends LoginPage {
 
      @Test
      public void testPrivacy() {
-       loginPage.CheckPrivacy();
+
+        loginPage.CheckPrivacy();
     }
 
       @Test
       public void testCreatePage() {
-
         loginPage.CheckCraetePage();
     }
 
