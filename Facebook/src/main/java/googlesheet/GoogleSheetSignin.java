@@ -3,6 +3,7 @@ package googlesheet;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.ValueRange;
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,13 +15,13 @@ public class GoogleSheetSignin {
     private By driver;
 
     public void typeEmailAddress(String locator, String value){
-            driver.findElement(By.id(locator)).sendKeys(value);
+            driver.findElement((SearchContext) By.xpath("email")).sendKeys(value);
         }
         public void typePasswords(String locator,String value){
-            driver.findElement(By.id(locator)).sendKeys(value);
+            driver.findElement((SearchContext) By.id("pass")).sendKeys(value);
         }
-        public void clickSignInGS(String locator){
-            driver.findElement(By.xpath(locator)).click();
+        public void clickLogin(String locator){
+            driver.findElement((SearchContext) By.xpath("//input[@id='u_0_2']")).click();
         }
         public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
             // Build a new authorized API client service.
@@ -40,7 +41,7 @@ public class GoogleSheetSignin {
             for (List row : values) {
                 typeEmailAddress("id_userLoginId",row.get(0).toString());
                 typePasswords("id_password",row.get(1).toString());
-                clickSignInGS("//button[.='Sign In']");
+                clickLogin("//button[.='Login']");
             }
         }
     }
