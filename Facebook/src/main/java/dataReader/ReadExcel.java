@@ -18,12 +18,12 @@ public class ReadExcel {
         System.out.println("Data From Excel is: "+data1);
         int rowcount = sheet1.getLastRowNum();
         //System.out.println("Total Row is: "+rowcount+1);
-        for (int i=0; i<rowcount; i+++){
-            String data0 = sheet1.getRow(i).getCell(1).getStringCellValue();
-            System.out.println("Excel Test Data form ROW : " + i +   data0);
-        }
-
-        wb.close();
+//        for (int i=0; i<rowcount; i++){
+//            String data0 = sheet1.getRow(i).getCell(1).getStringCellValue();
+//            System.out.println("Excel Test Data form ROW : " + i +   data0);
+//        }
+//
+//        wb.close();
 
 
     }
