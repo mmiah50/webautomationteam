@@ -51,7 +51,6 @@ public class ConnectToSqlDB {
             e.printStackTrace();
         }
     }
-
     public void createTableFromStringToMySql2(String tableName, String columnName1, String columnName2) throws InstantiationException, IllegalAccessException {
         try {
             connectToSqlDatabase();

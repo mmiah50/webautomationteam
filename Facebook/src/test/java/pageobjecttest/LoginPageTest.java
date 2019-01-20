@@ -30,30 +30,26 @@ public class LoginPageTest extends LoginPage {
     }
       @Test
       public void testfacebookLogo() {
-
         loginPage.checkfacebookLogo();
     }
      @Test
        public void SearchTest() {
-
         loginPage.searchFriend();
     }
 
      @Test
      public void testfirstname() {
-
         loginPage.checkfirstname();
     }
 
     @Test
     public void Profile() {
-
         loginPage.checkfirstname();
     }
 
      @Test
-     public void HomeTest() {
-        loginPage.CheckHome();
+     public void HomeTest(){
+           loginPage.CheckHome();
     }
 
       @Test
@@ -64,12 +60,11 @@ public class LoginPageTest extends LoginPage {
 
       @Test
       public void testNewsFeed() {
-
         loginPage.CheckNewsFeed();
     }
 
        @Test
-      public void testAddAccount() {
+      public void testAddAccount(){
         loginPage.CheckAddAccount();
     }
 
@@ -80,88 +75,80 @@ public class LoginPageTest extends LoginPage {
 
      @Test
      public void testGroups() {
-
         loginPage.CheckGroups();
     }
 
       @Test
       public void testGames() {
-
         loginPage.CheckGames();
     }
 
       @Test
      public void testInstagram() {
-
         loginPage.CheckInstagram();
      }
 
      @Test
-     public void testMarketPlace() {
-        loginPage.CheckMarketPlace();
+     public void testMarketPlace(){
+         loginPage.CheckMarketPlace();
      }
 
      @Test
-     public void testHelp() {
-
+     public void testHelp(){
         loginPage.CheckHelp();
      }
 
      @Test
-     public void testAccountSecurity() {
-       loginPage.CheckAccountSecurity();
+     public void testAccountSecurity(){
+        loginPage.CheckAccountSecurity();
      }
 
     @Test
      public void testTerms() {
-
        loginPage.CheckTerms();
      }
 
      @Test
       public void testAdChoices() {
-
         loginPage.CheckAdChoices();
     }
 
       @Test
       public void testLoginHelp() {
-       loginPage.CheckLoginHelp();
+        loginPage.CheckLoginHelp();
     }
      @Test
       public void testFacebookLite() {
-       loginPage.CheckFaceBookLite();
+        loginPage.CheckFaceBookLite();
     }
 
      @Test
       public void testFrame() {
-        loginPage.CheckFrame();
+            loginPage.CheckFrame();
     }
      @Test
      public void testFundraisers() {
-       loginPage.CheckFundraisers();
+        loginPage.CheckFundraisers();
     }
 
      @Test
      public void testPrivacy() {
-
         loginPage.CheckPrivacy();
     }
 
       @Test
       public void testCreatePage() {
-        loginPage.CheckCraetePage();
+         loginPage.CheckCraetePage();
     }
 
      @Test
      public void testPageCategories() {
-       loginPage.CheckPageCategories();
+        loginPage.CheckPageCategories();
     }
 
        @Test
        public void testGetMessenger() {
-
-        loginPage.Checkgetmessenger();
+         loginPage.Checkgetmessenger();
     }
 
       @Test
@@ -171,7 +158,6 @@ public class LoginPageTest extends LoginPage {
 
       @Test
       public void testPhotoNvideo() {
-
         loginPage.CheckphotoNvideo();
     }
 
@@ -180,8 +166,7 @@ public class LoginPageTest extends LoginPage {
       loginPage.CheckaboutFacebook();
     }
      @Test
-     public void testDataPolicy() {
-
+     public void testDataPolicy(){
         loginPage.CheckdataPolicy();
      }
       @Test
