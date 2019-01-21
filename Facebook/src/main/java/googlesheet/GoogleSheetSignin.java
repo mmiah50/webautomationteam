@@ -11,7 +11,6 @@ import static googlesheetapi.GoogleSheetReader.getSheetsService;
 public class GoogleSheetSignin {
 
     private By driver;
-
     public void typeEmailAddress(String locator, String value){
             driver.findElement((SearchContext) By.xpath("email")).sendKeys(value);
         }
