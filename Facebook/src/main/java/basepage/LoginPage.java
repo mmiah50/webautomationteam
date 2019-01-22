@@ -31,7 +31,7 @@ public class LoginPage extends CommonApi {
 
     public String validateLoginPageTitle() {
         username.sendKeys("miah_monir@yahooo.com");
-        password.sendKeys("rahimam12");
+        password.sendKeys("salmam12");
         loginBtn.click();
         return driver.getTitle();
     }
@@ -42,7 +42,6 @@ public class LoginPage extends CommonApi {
         loginBtn.click();
 
     }
-
     @FindBy(xpath = "//i[@class='fb_logo img sp_z3EmYTfbUVU sx_6a42ec']")
     public static WebElement facebookLogo;
     public void checkfacebookLogo() {
@@ -105,7 +104,6 @@ public class LoginPage extends CommonApi {
     public void CheckHome() {
 
     }
-
     @FindBy(linkText = "Find Friends")
     public static WebElement FindFriends;
     public void CheckFindFriends() {
@@ -116,13 +114,11 @@ public class LoginPage extends CommonApi {
     public static WebElement NewsFeed;
     public void CheckNewsFeed() {
     }
-
     @FindBy(xpath = "//div[@class='_1gaz _1ga- _50f6']")
     public static WebElement AddAccount;
     public void CheckAddAccount() {
 
     }
-
     @FindBy(xpath = "//a[@title='Check out Messenger.']")
     public static WebElement Messenger;
     public void CheckMesswnger() {
@@ -219,7 +215,6 @@ public class LoginPage extends CommonApi {
         forgetPassword.click();
 
     }
-
     @FindBy(xpath = "//div[@class='_1gaz _c24 _50f6']")
     public static WebElement myNameTag;
     public void CheckMyNameTag() {

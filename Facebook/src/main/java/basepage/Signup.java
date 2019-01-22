@@ -166,9 +166,6 @@
 //        }
 //
 //
-//
-//
-//
 //       // Landing pages
 //
 //        public NewsFeed gotonewsfeedPage() throws InterruptedException {

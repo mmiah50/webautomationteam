@@ -16,7 +16,10 @@
 //public void initilization12(){loginUsingDB=PageFactory.initElements(driver,loginUsingDB,class);}
 //
 //@Test
-//public void loginUsingDataFromDB() throws Exception {
+//public void loginUsingDataFromDB() throws Exception {@FindBy(xpath = "//input[@id='u_0_2']")
+//public static WebElement loginBtn;
+//    public void checkloginButton() {
+//        loginBtn.click();
 //    LoginPage.clickOnLoginBtn();
 //    loginUsingDB.loginUsingDataFromDB();
 //    loginPage.clickOnLoginBtnAgain();

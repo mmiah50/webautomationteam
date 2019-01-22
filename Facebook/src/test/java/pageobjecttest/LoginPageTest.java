@@ -19,7 +19,6 @@ public class LoginPageTest extends LoginPage {
 
      @Test
      public void loginPageTitleTest() throws Exception {
-
         ConnectToSqlDB connect = new ConnectToSqlDB();
         connect.connectToSqlDatabase();
 
