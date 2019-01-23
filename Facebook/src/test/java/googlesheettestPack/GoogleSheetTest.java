@@ -1,54 +1,34 @@
-//package googlesheettestPack;
-//
-//import basepage.LoginPage;
-//import googlesheet.GoogleSheetSignin;
-//
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.support.PageFactory;
-//import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.Test;
-//import reporting.TestLogger;
-//
-//import java.io.IOException;
-//
-//public class GoogleSheetTest extends GoogleSheetSignin {
-//    basepage.LoginPage LoginPage;
-//    private WebDriver driver;
-//
-//
-//    @BeforeMethod
-//    public void initElements() throws IOException, InterruptedException {
-//        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-//        }.getClass().getEnclosingMethod().getName()));
-//        LoginPage = PageFactory.initElements(driver, basepage.LoginPage.class);
-//        LoginPage = PageFactory.initElements(driver, LoginPage.class);
-//        setUrl("http://www.facebook.com");
-//        LoginPage.checkloginButton();
-//    }
-//
-//    private static void setUrl(String s) {
-//    }
-//
-//    private String convertToString(int name) throws IOException, InterruptedException {
-//        convertToString();
-//
-//    }
-//
-//        @Test
-//        void loginEmailAndPassword;
-//        TestLogger.login(
-//
-//    <getClass> convertToString("C: " +getClass().getSimpleName()) + " - M: " + convertToString(new Object() {
-//        }.getClass().getEnclosingMethod().getName()));
-//        String spreadsheetId = "1h-FtsfIBgUhA8woZUw8DuxY92KQcO_n-vxjPSuugG-s";
-//        String range = "Sheet1!A2:B2";
-//        enterUserNameAndPassword(spreadsheetId, range);
-//
-//
-//    }
-//
-//    private void convertToString(String name) {
-//    }
-//
-//}
-//
+package googlesheettestPack;
+import googlesheetapi.GoogleSheetReader;
+import basepage.SearchFunctionality;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import reporting.TestLogger;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Properties;
+public class GoogleSheetTest extends SearchFunctionality {
+    SearchFunctionality search=null;
+    @BeforeMethod
+    public void initialisationOfElements(){
+        search = PageFactory.initElements(driver,SearchFunctionality.class);
+
+    }
+    @Test
+    public void testSearchWithEnterfromSheet() throws IOException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Properties properties=loadProperties();
+        String spreadSheetId=properties.getProperty("GOOGLE.spreadsheetId");
+        String range=properties.getProperty("GOOGLE.range");
+        List<List<Object>> getRecords= GoogleSheetReader.getSpreadSheetRecords(spreadSheetId,range );
+        for(List cell:getRecords){
+            String messageText=searchWithENTER(cell.get(0).toString());
+            String message=cell.get(1).toString();
+            navigateBack();
+            Assert.assertEquals( message,messageText);
+        }
+    }
+}

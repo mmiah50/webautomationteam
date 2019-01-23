@@ -2,9 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Facebook Automation Script " parallel="false">
-    <!--<parameter name="useCloudEnv" value="false"/>
-   <parameter name="cloudEnvName" value="browserstack"/>-->
-
+    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="windows"/>
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
@@ -12,9 +11,10 @@
     <parameter name="url" value="http://www.Facebook.com"/>
 
 
-    <test name = "Facebook Test">
+    <test name="Facebook Test">
         <classes>
             <class name="pageobjecttest.LoginPageTest"/>
+            <class name="pageobjecttest.SearchTest"/>
 
         </classes>
     </test>
