@@ -20,7 +20,7 @@ public class SearchTest<prefs> extends SearchFriend {
     @Test
     public void test(){
         SF.Search();
-        SF.btn();
+        SF.Btn();
     }
 
 

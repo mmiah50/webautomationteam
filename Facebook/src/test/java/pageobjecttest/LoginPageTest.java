@@ -28,7 +28,7 @@ public class LoginPageTest extends LoginPage {
         Thread.sleep(1000);
     }
       @Test
-      public void testfacebookLogo() {
+      public void testfacebookLogo(){
         loginPage.checkfacebookLogo();
     }
      @Test
@@ -48,7 +48,7 @@ public class LoginPageTest extends LoginPage {
 
      @Test
      public void HomeTest(){
-           loginPage.CheckHome();
+        loginPage.CheckHome();
     }
 
       @Test
@@ -59,6 +59,7 @@ public class LoginPageTest extends LoginPage {
 
       @Test
       public void testNewsFeed() {
+
         loginPage.CheckNewsFeed();
     }
 
@@ -89,7 +90,7 @@ public class LoginPageTest extends LoginPage {
 
      @Test
      public void testMarketPlace(){
-         loginPage.CheckMarketPlace();
+        loginPage.CheckMarketPlace();
      }
 
      @Test
@@ -103,30 +104,29 @@ public class LoginPageTest extends LoginPage {
      }
 
     @Test
-     public void testTerms() {
+     public void testTerms(){
        loginPage.CheckTerms();
      }
 
      @Test
-      public void testAdChoices() {
+      public void testAdChoices(){
         loginPage.CheckAdChoices();
     }
 
       @Test
-      public void testLoginHelp() {
+      public void testLoginHelp(){
         loginPage.CheckLoginHelp();
     }
      @Test
-      public void testFacebookLite() {
+      public void testFacebookLite(){
         loginPage.CheckFaceBookLite();
     }
 
      @Test
-      public void testFrame() {
-            loginPage.CheckFrame();
-    }
+      public void testFrame(){
+            loginPage.CheckFrame();}
      @Test
-     public void testFundraisers() {
+     public void testFundraisers(){
         loginPage.CheckFundraisers();
     }
 
@@ -170,10 +170,20 @@ public class LoginPageTest extends LoginPage {
      }
       @Test
       public void testCookiesPolicy() {
-      loginPage.CheckcookiesPolicy();
+          loginPage.CheckCookiesPolicy();
+      }
+      @Test
+       public void testSearchBox(){
+          loginPage.CheckSearchBox();
+          }
+     @Test
+     public void testEspanol(){
+      loginPage.CheckEspanol();
 
     }
-      @AfterMethod
+
+
+     @AfterMethod
       public void tearDom() {
       driver.quit();
 }

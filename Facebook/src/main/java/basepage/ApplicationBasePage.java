@@ -19,13 +19,13 @@ import java.util.List;
 import java.util.Properties;
 public class ApplicationBasePage extends CommonApi {
     Properties prop=null;
-    @FindBy(name = "OnlineOpinion1")
+    @FindBy(xpath = "//*[@id=\"email\"]")
     public static WebElement feedbackFrame;
-    @FindBy(id="oo_tab")
+    @FindBy(name = "pass")
     public static WebElement feedbackIcon;
-    @FindBy (css = ".large_only")
+    @FindBy (xpath = "//*[@id=\"u_0_2\"]")
     public static WebElement heroImage;
-    @FindBy(css = "#header-right-links > ul > li:nth-child(3) > a > span")
+    @FindBy(css = "#js_5t")
     public static WebElement searchIcon;
 
     public static void clearField(WebElement webElement) {
@@ -66,7 +66,7 @@ public class ApplicationBasePage extends CommonApi {
     }
     public static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
-        File filepath = new File("C:\\Users\\arifq\\eclipse-workspace\\webautomationteam\\Geico\\src\\test\\Resources\\secret.properties");
+        File filepath = new File("C:\\Users\\Moniruzzaman Miah\\Desktop\\java1\\webautomationteam\\Facebook\\src\\test\\resource\\secret.properties");
         InputStream ism = new FileInputStream(filepath.getAbsoluteFile());
         prop.load(ism);
         ism.close();

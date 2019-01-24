@@ -239,14 +239,32 @@ public class LoginPage extends CommonApi {
 
     @FindBy(xpath = "//a[@id='cookie-use-link']")
     public static WebElement cookiesPolicy;
-    public void CheckcookiesPolicy() {
+    public void CheckCookiesPolicy() {
         cookiesPolicy.click();
+    }
+        @FindBy(xpath = "//div[@id='u_d_2']//input[@placeholder='Search']")
+         public static WebElement searchBox;
+        public void CheckSearchBox(){
+            searchBox.click();
+
+       }
+       @FindBy(id="u_0_15")
+      public static WebElement signin;
+        public void CheckSignin(){
+
+        }
+     @FindBy(xpath = "//a[@title='Spanish']")
+     public static WebElement espanol;
+     public void CheckEspanol(){
+
+    }
+
 
 
     }
 
 
-}
+
 
 
 

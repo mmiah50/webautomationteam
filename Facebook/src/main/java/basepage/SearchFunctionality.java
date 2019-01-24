@@ -8,50 +8,64 @@ import basepage.ApplicationBasePage;
 import reporting.TestLogger;
 import java.util.ArrayList;
 import java.util.List;
-public class SearchFunctionality extends ApplicationBasePage {
-    @FindBy(xpath = "//*[@id=\"primary-navigation\"]/div[6]/form/input")
-    public static WebElement searchTextBox;
-    @FindBy(xpath = "//*[@id=\"primary-navigation\"]/div[6]/form/button")
-    public static WebElement searchSubmitButton;
-    @FindBy(xpath = "//a[@class='search']")
-    public static WebElement searchIcon;
-    @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/h1[1]")
-    public static WebElement searchResultHeadline;
-    public   void waitToBeVisible(){
-        searchIcon.click();
-        wait.until(ExpectedConditions.visibilityOf(searchTextBox));
+public class SearchFunctionality extends LoginPage {
+    @FindBy(css = "#u_h_2 > input._1frb")
+    public static WebElement searchBox;
+    @FindBy(xpath = "//*[@id=\"u_h_2\"]/input[2]")
+    public static WebElement searchMessage;
+    private Object name;
+    private String getMessage;
+
+    private String searchWithENTER(String key) {
+        return getMessage;
     }
-    public String searchWithENTER(String searchKeys){
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+    private void navigateBack() {
+        navigateBack();
+    }
+
+    public void waitToBeVisible() {
+        searchMessage.click();
+        wait.until(ExpectedConditions.visibilityOf(searchMessage));
+    }
+    public String searchWithEnter(String searchKeys) {
+        TestLogger.log(getClass().getSimpleName() + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        // waitToBeVisible();
+        searchBox.sendKeys(searchKeys, Keys.ENTER);
+        return searchMessage.getText();
+
+    }
+    public String searchOptionTab() {
+        TestLogger.log(getClass().getSimpleName() + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         waitToBeVisible();
-        clearField(searchTextBox);
-        searchTextBox.sendKeys(searchKeys, Keys.ENTER);
-        return searchResultHeadline.getText();
+        return searchMessage.getText();
+
     }
-    public String searchUsingButton(String searchKeys){
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        waitToBeVisible();
-        clearField(searchTextBox);
-        searchTextBox.sendKeys(searchKeys);
-        searchSubmitButton.click();
-        return searchResultHeadline.getText();
+    private String convertToString(String name) {
+        return name;
     }
+
+
     List<String> keyList = new ArrayList<String>();
-    List<String> messageList=new ArrayList<>();
-    public List<String> getSearchKeys(){
-        keyList.add("Bill Clinton");
+    List<String> messageList = new ArrayList<>();
+
+    public List<String> getSearchKeys() {
+        keyList.add("Barak Obama");
         keyList.add("Jimmy Carter");
         keyList.add("George Bush");
-        //keyList.add("condo");
+        keyList.add("Theodore Roosevelt");
         return keyList;
     }
     public List<String> searchfromdatabase() throws Exception {
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        ConnectToSqlDB con=new ConnectToSqlDB();
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        ConnectToSqlDB con = new ConnectToSqlDB();
         getSearchKeys();
-        con.insertDataFromArrayListToSqlTable(keyList,"SearchItem","SearchKeys");
-        List<String> data = con.readDataBase("SearchItem","SearchKeys");
-        for (String key:data){ String messageText=searchWithENTER(key);
+        con.insertDataFromArrayListToSqlTable(keyList, "SearchItem", "SearchKeys");
+        List<String> data = con.readDataBase("SearchItem", "SearchKeys");
+        for (String key : data) {
+            String messageText = searchWithENTER(key);
             messageList.add(messageText);
             navigateBack();
         }
