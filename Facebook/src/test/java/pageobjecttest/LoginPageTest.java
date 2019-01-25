@@ -1,5 +1,5 @@
 package pageobjecttest;
-import base.CommonApi;
+//import base.CommonApi;
 import basepage.LoginPage;
 import database.ConnectToSqlDB;
 import org.openqa.selenium.support.FindBy;
@@ -53,7 +53,6 @@ public class LoginPageTest extends LoginPage {
 
       @Test
       public void testFrienFriends() {
-
         loginPage.CheckFindFriends();
     }
 
@@ -62,7 +61,6 @@ public class LoginPageTest extends LoginPage {
 
         loginPage.CheckNewsFeed();
     }
-
        @Test
       public void testAddAccount(){
         loginPage.CheckAddAccount();
@@ -134,12 +132,10 @@ public class LoginPageTest extends LoginPage {
      public void testPrivacy() {
         loginPage.CheckPrivacy();
     }
-
       @Test
       public void testCreatePage() {
          loginPage.CheckCraetePage();
     }
-
      @Test
      public void testPageCategories() {
         loginPage.CheckPageCategories();
@@ -170,23 +166,36 @@ public class LoginPageTest extends LoginPage {
      }
       @Test
       public void testCookiesPolicy() {
-          loginPage.CheckCookiesPolicy();
+        loginPage.CheckCookiesPolicy();
       }
       @Test
        public void testSearchBox(){
           loginPage.CheckSearchBox();
           }
-     @Test
-     public void testEspanol(){
+      @Test
+      public void testEspanol(){
       loginPage.CheckEspanol();
+    }
+      @Test
+      public void testForgetPassword(){
+        loginPage.CheckForgetPassword();
+
+    }
+      @Test
+      public void testIntegram(){
+        loginPage.CheckInstagram();
+
+    }
+      @Test
+       public void testAbotFB(){
+        loginPage.CheckAboutFacebook();
 
     }
 
-
-     @AfterMethod
+      /*@AfterMethod
       public void tearDom() {
       driver.quit();
-}
+    }*/
 }
 
 

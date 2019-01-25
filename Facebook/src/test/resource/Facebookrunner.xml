@@ -8,14 +8,15 @@
     <parameter name="os" value="windows"/>
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
-    <parameter name="browserVersion" value="62.0"/>
-    <parameter name="url" value="http://www.Facebook.com"/>
+    <parameter name="browserVersion" value="60.0"/>
+    <parameter name="url" value="https://www.facebook.com/"/>
 
 
-    <test name="Facebook Test">
+    <test name="Facebook Test" enabled="true">
         <classes>
             <class name="pageobjecttest.LoginPageTest"/>
-            <class name="pageobjecttest.SearchTest"/>
+            <!--<class name="pageobjecttest.SearchTest"/>-->
+           <!-- <class name="googlesheettestPack.GoogleSheetTest"/>-->
 
         </classes>
     </test>
