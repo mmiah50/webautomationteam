@@ -1,5 +1,4 @@
 package basepage;
-
 import base.CommonApi;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -7,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
-
 public class SearchFriend extends CommonApi {
     @FindBy(name = "q")
     WebElement SearchFriend;
@@ -21,7 +19,6 @@ public class SearchFriend extends CommonApi {
     WebElement password;
     @FindBy(xpath = "//input[@id='u_0_2']")
     WebElement loginBtn;
-
        public SearchFriend() {
         PageFactory.initElements(driver, this);
     }

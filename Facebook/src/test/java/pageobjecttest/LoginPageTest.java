@@ -7,189 +7,168 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 public class LoginPageTest extends LoginPage {
-    LoginPage loginPage;
-
-    @BeforeMethod
-    public void init() {
+     LoginPage loginPage;
+     @BeforeMethod
+     public void init() {
         loginPage = PageFactory.initElements(driver,
                 LoginPage.class);
-    }
-
-     @Test
-     public void loginPageTitleTest() throws Exception {
+     }
+      @Test
+      public void loginPageTitleTest() throws Exception {
         ConnectToSqlDB connect = new ConnectToSqlDB();
         connect.connectToSqlDatabase();
-
-
         String title = loginPage.validateLoginPageTitle();
         System.out.println("Page Title:" + title);
         Thread.sleep(1000);
-    }
-      @Test
-      public void testfacebookLogo(){
-        loginPage.checkfacebookLogo();
-    }
-     @Test
-       public void SearchTest() {
-        loginPage.searchFriend();
-    }
-
-     @Test
-     public void testfirstname() {
+       }
+        @Test
+        public void testfacebookLogo(){
+        loginPage.checkfacebookLogo(); }
+       @Test
+        public void SearchTest() {
+        loginPage.searchFriend(); }
+       @Test
+        public void testfirstname() {
         loginPage.checkfirstname();
     }
-
-    @Test
-    public void Profile() {
+       @Test
+        public void Profile() {
         loginPage.checkfirstname();
     }
-
-     @Test
-     public void HomeTest(){
-        loginPage.CheckHome();
+       @Test
+       public void HomeTest(){
+       loginPage.CheckHome();
     }
-
-      @Test
-      public void testFrienFriends() {
+       @Test
+       public void testFrienFriends() {
         loginPage.CheckFindFriends();
     }
-
-      @Test
+       @Test
       public void testNewsFeed() {
-
-        loginPage.CheckNewsFeed();
+       loginPage.CheckNewsFeed();
     }
        @Test
-      public void testAddAccount(){
-        loginPage.CheckAddAccount();
-    }
+          public void testAddAccount(){
 
-     @Test
-     public void testMessenger() {
-        loginPage.CheckMesswnger();
+         loginPage.CheckAddAccount();
     }
-
-     @Test
-     public void testGroups() {
-        loginPage.CheckGroups();
+       @Test
+        public void testMessenger() {
+      loginPage.CheckMesswnger();
     }
-
-      @Test
-      public void testGames() {
-        loginPage.CheckGames();
+       @Test
+       public void testGroups() {
+      loginPage.CheckGroups();
     }
+       @Test
+         public void testGames() {
 
-      @Test
-     public void testInstagram() {
-        loginPage.CheckInstagram();
+         loginPage.CheckGames();
+    }
+       @Test
+        public void testInstagram() {
+       loginPage.CheckInstagram();
      }
+       @Test
+        public void testMarketPlace(){
 
-     @Test
-     public void testMarketPlace(){
-        loginPage.CheckMarketPlace();
+         loginPage.CheckMarketPlace();
      }
-
-     @Test
-     public void testHelp(){
-        loginPage.CheckHelp();
+       @Test
+         public void testHelp(){
+         loginPage.CheckHelp();
      }
+       @Test
+        public void testAccountSecurity(){
+       loginPage.CheckAccountSecurity();
+      }
+       @Test
+         public void testTerms(){
 
-     @Test
-     public void testAccountSecurity(){
-        loginPage.CheckAccountSecurity();
+         loginPage.CheckTerms();
      }
-
-    @Test
-     public void testTerms(){
-       loginPage.CheckTerms();
-     }
-
-     @Test
-      public void testAdChoices(){
-        loginPage.CheckAdChoices();
+       @Test
+          public void testAdChoices(){
+       loginPage.CheckAdChoices();
     }
-
-      @Test
-      public void testLoginHelp(){
-        loginPage.CheckLoginHelp();
+       @Test
+         public void testLoginHelp(){
+       loginPage.CheckLoginHelp();
     }
-     @Test
-      public void testFacebookLite(){
-        loginPage.CheckFaceBookLite();
+       @Test
+         public void testFacebookLite(){
+       loginPage.CheckFaceBookLite();
     }
-
-     @Test
+       @Test
       public void testFrame(){
-            loginPage.CheckFrame();}
-     @Test
-     public void testFundraisers(){
-        loginPage.CheckFundraisers();
-    }
+       loginPage.CheckFrame();}
+       @Test
+       public void testFundraisers(){
 
-     @Test
-     public void testPrivacy() {
-        loginPage.CheckPrivacy();
+         loginPage.CheckFundraisers();
     }
-      @Test
-      public void testCreatePage() {
-         loginPage.CheckCraetePage();
+       @Test
+         public void testPrivacy() {
+      loginPage.CheckPrivacy();
     }
-     @Test
-     public void testPageCategories() {
-        loginPage.CheckPageCategories();
+       @Test
+         public void testCreatePage() {
+      loginPage.CheckCraetePage();
+    }
+       @Test
+        public void testPageCategories() {
+      loginPage.CheckPageCategories();
     }
 
        @Test
-       public void testGetMessenger() {
-         loginPage.Checkgetmessenger();
+          public void testGetMessenger() {
+       loginPage.Checkgetmessenger();
     }
-
-      @Test
-      public void testmyNameTag() {
+       @Test
+         public void testmyNameTag() {
       loginPage.CheckMyNameTag();
     }
+       @Test
+        public void testPhotoNvideo() {
 
-      @Test
-      public void testPhotoNvideo() {
-        loginPage.CheckphotoNvideo();
+         loginPage.CheckphotoNvideo();
     }
+       @Test
+         public void testAboutFacebook() {
 
-     @Test
-      public void testAboutFacebook() {
-      loginPage.CheckaboutFacebook();
+         loginPage.CheckaboutFacebook();
     }
-     @Test
-     public void testDataPolicy(){
-        loginPage.CheckdataPolicy();
+       @Test
+           public void testDataPolicy(){
+       loginPage.CheckdataPolicy();
      }
-      @Test
-      public void testCookiesPolicy() {
-        loginPage.CheckCookiesPolicy();
+       @Test
+           public void testCookiesPolicy() {
+           loginPage.CheckCookiesPolicy();
       }
-      @Test
+       @Test
        public void testSearchBox(){
-          loginPage.CheckSearchBox();
+        loginPage.CheckSearchBox();
           }
-      @Test
-      public void testEspanol(){
-      loginPage.CheckEspanol();
+       @Test
+       public void testEspanol(){
+       loginPage.CheckEspanol();
     }
-      @Test
-      public void testForgetPassword(){
-        loginPage.CheckForgetPassword();
+       @Test
+       public void testForgetPassword(){
 
+         loginPage.CheckForgetPassword();
     }
-      @Test
-      public void testIntegram(){
-        loginPage.CheckInstagram();
+       @Test
+       public void testIntegram(){
 
+         loginPage.CheckInstagram();
     }
-      @Test
+       @Test
        public void testAbotFB(){
-        loginPage.CheckAboutFacebook();
 
+         loginPage.CheckAboutFacebook();
     }
 
       /*@AfterMethod

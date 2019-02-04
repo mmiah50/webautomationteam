@@ -15,8 +15,8 @@
     <test name="Facebook Test" enabled="true">
         <classes>
             <class name="pageobjecttest.LoginPageTest"/>
-            <!--<class name="pageobjecttest.SearchTest"/>-->
-           <!-- <class name="googlesheettestPack.GoogleSheetTest"/>-->
+            <class name="pageobjecttest.SearchTest"/>
+            <class name="googlesheettestPack.GoogleSheetTest"/>
 
         </classes>
     </test>

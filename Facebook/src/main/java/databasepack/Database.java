@@ -1,22 +1,16 @@
 package databasepack;
-
 import base.CommonApi;
+import database.ConnectToSqlDB;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class Database extends CommonApi{
-
         public void logIn(){
             driver.findElement(By.xpath("//*[@name='email']")).sendKeys("miah_monir@yahoo.com");
             driver.findElement(By.xpath("//*[@name='pass']")).sendKeys("rahimam12");
             driver.findElement(By.xpath("//*[@id='loginbutton']")).click();
-
-//            typeByXpath("//*[@name='email']", "miah_monir@yahoo.com.com");
-//            typeByXpath("//*[@name='pass']", "newaccount123");
-//            clickByXpath("//*[@id='loginbutton']");
-        }
+         }
         //insert data to database
         public static List<String> getItemValue() {
             List<String> itemsList = new ArrayList<String>();
@@ -27,17 +21,17 @@ public class Database extends CommonApi{
             return itemsList;
         }
         //put Data to DB-Mysql
-        public static void main(String[] args) {
-            ConnectDB connectDB = new ConnectDB();
-            connectDB.insertDataFromArrayListToMySql1(getItemValue(),"MusicBands","");
+        public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+            ConnectToSqlDB connectDB = new ConnectToSqlDB();
+            connectDB.insertDataFromArrayListToSqlTable(getItemValue(),"MusicBands","");
         }
         //bring data from db and search using them
         public void searchByDB() throws Exception {
-            ConnectDB connectDB = new ConnectDB();
+            ConnectToSqlDB connectDB = new ConnectToSqlDB();
             List<String> items = connectDB.readDataBase("MusicBands","Names");
             for (int i = 0; i < items.size(); i++) {
-                typeByXpathEnter("//*[@name='q']", items.get(i));
-                clearInputByXpath("//*[@name='q']");
+                typeByXpath("//*[@name='q']", items.get(i));
+                clearInputField("//*[@name='q']");
             }
         }
     }

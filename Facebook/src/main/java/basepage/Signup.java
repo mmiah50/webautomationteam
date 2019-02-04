@@ -1,11 +1,9 @@
 package basepage;
-
 import base.CommonApi;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
     public class Signup extends CommonApi {
         //Webelements
         @FindBy(css = "#u_0_c")
@@ -62,12 +60,10 @@ import org.openqa.selenium.support.PageFactory;
         WebElement footerPlaces;
         @FindBy(css = "._24s5 strong")
         WebElement discoverplacesbanner;
-
         //for initializing when object will be created
         public Signup() {
             PageFactory.initElements(driver, this);
         }
-
         public void signup() throws InterruptedException {
             firstname.sendKeys("Monir", Keys.TAB, "Miah", Keys.TAB, "Email", Keys.TAB, "password",
                     Keys.TAB, Keys.ARROW_DOWN, Keys.ENTER, Keys.TAB, Keys.ARROW_DOWN, Keys.ENTER, Keys.TAB,
@@ -79,57 +75,47 @@ import org.openqa.selenium.support.PageFactory;
             password.sendKeys("rahima12", Keys.ENTER);
             Thread.sleep(1000);
         }
-
         public String validateLoginPageTitle() {
             return driver.getTitle();
         }
-
         public boolean validateLogoimg() {
             return Fblogoimg.isDisplayed();
         }
-
         public boolean clickOnEspanol() throws InterruptedException {
             espanol.click();
             Thread.sleep(1000);
             return bannerinespanol.isDisplayed();
         }
-
         public boolean clickOnFooterSignup() throws InterruptedException {
             footersignup.click();
             Thread.sleep(1000);
             return createAnewAccountBanner.isDisplayed();
         }
-
         public boolean clickOnFooterLogin() throws InterruptedException {
             footerlogin.click();
             Thread.sleep(1000);
             return logintofacebookbanner.isDisplayed();
         }
-
         public boolean clickOnFooterMessenger() throws InterruptedException {
             footermessenger.click();
             Thread.sleep(1000);
             return messengerbanner.isDisplayed();
         }
-
         public boolean clickOnFooterFbLite() throws InterruptedException {
             footerfblite.click();
             Thread.sleep(1000);
             return facebooklitebanner.isDisplayed();
         }
-
         public boolean clickOnFooterMobile() throws InterruptedException {
             footermobile.click();
             Thread.sleep(1000);
             return mobilebanner.isDisplayed();
         }
-
         public boolean clickOnFooterFindfriends() throws InterruptedException {
             footerFindFriends.click();
             Thread.sleep(1000);
             return findfriendsbanner.isDisplayed();
         }
-
         public boolean clickOnFooterpeople() throws InterruptedException {
             footerpeople.click();
             Thread.sleep(1000);
@@ -145,7 +131,6 @@ import org.openqa.selenium.support.PageFactory;
             Thread.sleep(1000);
             return facebookbanner.isDisplayed();
         }
-
         public boolean clickOnFooterpagecatagories() throws InterruptedException {
             footerpagecatagories.click();
             Thread.sleep(1000);
@@ -168,7 +153,6 @@ import org.openqa.selenium.support.PageFactory;
         public void gotoprofiles(){
             footerProfiles.click();
         }
-
     }
 
 

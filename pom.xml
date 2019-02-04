@@ -6,19 +6,13 @@
 
     <groupId>practice.web.automation</groupId>
     <artifactId>webautomationteam</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Generic</module>
         <module>Facebook</module>
+        <module>RestApi</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>practice.web.automation</groupId>
-            <artifactId>Generic</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>

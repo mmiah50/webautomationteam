@@ -1,12 +1,8 @@
 package googlesheettestPack;
-
 import googlesheet.GoogleSheet;
 import org.testng.annotations.Test;
-
 import java.io.IOException;
-
 public class GoogleSheetTest extends GoogleSheet {
-
         @Test
         public void test()throws IOException, InterruptedException{
             logIn();
